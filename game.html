@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,height=device-height,user-scalable=no,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <title>飞天火箭</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/animation.css">
+    <link rel="stylesheet" href="css/main.css">
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.js"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="g-container pa">
+    <section class="pa num resize">
+        <span class="txt pa" id="num">0</span>
+    </section>
+    <section class="pa time resize">
+        <span class="txt pa" id="duration">60s</span>
+    </section>
+
+    <section class="move pa" id="moveBg">
+        <img src="img/cai.png" class="cImg c resize pa">
+        <img src="img/cai.png" class="cImg c1 resize pa">
+        <img src="img/cai.png" class="cImg c2 resize pa">
+        <img src="img/cai.png" class="cImg c3 resize pa">
+        <img src="img/cai.png" class="cImg c4 resize pa">
+        <img src="img/cai.png" class="cImg c5 resize pa">
+        <img src="img/cai.png" class="cImg c6 resize pa">
+        <img src="img/cai.png" class="cImg c7 resize pa">
+        <img src="img/cai.png" class="cImg c8 resize pa">
+        <img src="img/ji.png"  class="cImg c9 resize pa">
+        <img src="img/cai.png" class="cImg c10 resize pa">
+        <img src="img/cai.png" class="cImg c11 resize pa">
+        <img src="img/cai.png" class="cImg c12 resize pa">
+        <img src="img/cai.png" class="cImg c13 resize pa">
+        <img src="img/ji.png"  class="cImg c14 resize pa">
+        <img src="img/ji.png"  class="cImg c15 resize pa">
+        <img src="img/ji.png"  class="cImg c16 resize pa">
+        <img src="img/ji.png"  class="cImg c17 resize pa">
+        <img src="img/ji.png"  class="cImg c18 resize pa">
+        <img src="img/cai.png" class="cImg c19 resize pa">
+        <img src="img/cai.png" class="cImg c20 resize pa">
+        <img src="img/ji.png"  class="cImg c21 resize pa">
+        <img src="img/ji.png"  class="cImg c22 resize pa">
+        <img src="img/ji.png"  class="cImg c23 resize pa">
+        <img src="img/ji.png"  class="cImg c24 resize pa">
+        <img src="img/ji.png"  class="cImg c25 resize pa">
+        <img src="img/ji.png"  class="cImg c26 resize pa">
+        <img src="img/ji.png"  class="cImg c27 resize pa">
+        <img src="img/ji.png"  class="cImg c28 resize pa">
+        <img src="img/cai.png" class="cImg c29 resize pa">
+        <img src="img/cai.png" class="cImg c30 resize pa">
+        <img src="img/cai.png" class="cImg c31 resize pa">
+        <img src="img/cai.png" class="cImg c32 resize pa">
+        <img src="img/ji.png"  class="cImg c33 resize pa">
+        <img src="img/ji.png"  class="cImg c34 resize pa">
+        <img src="img/ji.png"  class="cImg c35 resize pa">
+        <img src="img/ji.png"  class="cImg c36 resize pa">
+        <img src="img/cai.png" class="cImg c37 resize pa">
+        <img src="img/cai.png" class="cImg c38 resize pa">
+        <img src="img/cai.png" class="cImg c39 resize pa">
+        <img src="img/cai.png" class="cImg c40 resize pa">
+        <img src="img/ji.png"  class="cImg c41 resize pa">
+        <img src="img/ji.png"  class="cImg c42 resize pa">
+        <img src="img/ji.png"  class="cImg c43 resize pa">
+        <img src="img/rocket1.png" class="pa rocket resize" id="rocket">
+    </section>
+
+    <img src="img/left.png" class="pa left resize" id="left">
+    <img src="img/right.png" class="pa right resize" id="right">
+    <img src="img/speed.png" class="pa speed resize" id="speed">
+
+    <!--倒计时开始-->
+    <section class="count-down pa">
+        <p class="pa" id="count-down-num">3</p>
+    </section>
+
+</div>
+<script src="js/jquery-2.1.4.min.js"></script>
+<script src="js/scale.js"></script>
+<script src="js/main.js"></script>
+<script>
+    document.onreadystatechange = loaded;//当页面加载状态改变的时候执行这个方法.
+    function loaded()
+    {
+        if(document.readyState === "complete"){
+            countDown();
+            setTimeout(function () {
+                move(9000);
+                leftAndRight();
+                speedUp();
+                timeDuration();
+            },4000)
+        }
+    }
+</script>
+</body>
+</html>
